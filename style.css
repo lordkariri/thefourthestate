@@ -1,0 +1,25 @@
+body {
+    background-color: lightblue;
+  }
+
+#startbutton{
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  font-family: inherit;
+  background-color: black;
+  z-index: 400;
+  position: absolute;
+}
+
+#map{
+    position: absolute;
+    z-index: 1;
+   top:0;
+   bottom:0;
+   left:25%;
+   right:0; 
+   width: 75%;
+   height: 100%;
+}
+

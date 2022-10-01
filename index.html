@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>karina epq</title>
+   
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidebar.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="startbutton" onclick="program()">press to start.</button>
+    <div id = "map"> </div>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 id = "header"></h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                <li>
+                    <a href="#us_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">US</a>
+                    <ul class="collapse list-unstyled" id="us_Submenu">
+                        <li>
+                            <a id ="us_headline0" onclick="program().headline_called('us00');">{{us_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline1" onclick="program().headline_called('us01');">{{us_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline2" onclick="program().headline_called('us02');">{{us_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline3" onclick="program().headline_called('us03');">{{us_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline4" onclick="program().headline_called('us04');">{{us_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline5" onclick="program().headline_called('us05');">{{us_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline6" onclick="program().headline_called('us06');">{{us_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline7" onclick="program().headline_called('us07');">{{us_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline8" onclick="program().headline_called('us08');">{{us_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline9" onclick="program().headline_called('us09');">{{us_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline10" onclick="program().headline_called('us10');">{{us_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline11" onclick="program().headline_called('us11');">{{us_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline12" onclick="program().headline_called('us12');">{{us_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline13" onclick="program().headline_called('us13');">{{us_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="us_headline14" onclick="program().headline_called('us14');">{{us_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+               
+                <li>
+                    <a href="#uk_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">UK</a>
+                    <ul class="collapse list-unstyled" id="uk_Submenu">
+                        <li>
+                            <a id ="uk_headline0" onclick="tester()">{{uk_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline1" onclick="program().headline_called('uk01');">{{uk_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline2" onclick="program().headline_called('uk02');">{{uk_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline3" onclick="program().headline_called('uk03');">{{uk_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline4" onclick="program().headline_called('uk04');">{{uk_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline5" onclick="program().headline_called('uk05');">{{uk_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline6" onclick="program().headline_called('uk06');">{{uk_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline7" onclick="program().headline_called('uk07');">{{uk_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline8" onclick="program().headline_called('uk08');">{{uk_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline9" onclick="program().headline_called('uk09');">{{uk_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline10" onclick="program().headline_called('uk10');">{{uk_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline11" onclick="program().headline_called('uk11');">{{uk_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline12" onclick="program().headline_called('uk12');">{{uk_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline13" onclick="program().headline_called('uk13');">{{uk_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="uk_headline14" onclick="program().headline_called('uk14');">{{uk_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#france_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">FRANCE</a>
+                    <ul class="collapse list-unstyled" id="france_Submenu">
+                        <li>
+                            <a id ="france_headline0" onclick="program().headline_called('france00');">{{france_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline1" onclick="program().headline_called('france01');">{{france_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline2" onclick="program().headline_called('france02');">{{france_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline3" onclick="program().headline_called('france03');">{{france_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline4" onclick="program().headline_called('france04');">{{france_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline5" onclick="program().headline_called('france05');">{{france_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline6" onclick="program().headline_called('france06');">{{france_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline7" onclick="program().headline_called('france07');">{{france_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline8" onclick="program().headline_called('france08');">{{france_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline9" onclick="program().headline_called('france09');">{{france_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline10" onclick="program().headline_called('france10');">{{france_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline11" onclick="program().headline_called('france11');">{{france_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline12" onclick="program().headline_called('france12');">{{france_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline13" onclick="program().headline_called('france13');">{{france_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="france_headline14" onclick="program().headline_called('france14');">{{france_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#germany_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">GERMANY</a>
+                    <ul class="collapse list-unstyled" id="germany_Submenu">
+                        <li>
+                            <a id ="germany_headline0" onclick="program().headline_called('germany00');">{{germany_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline1" onclick="program().headline_called('germany01');">{{germany_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline2" onclick="program().headline_called('germany02');">{{germany_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline3" onclick="program().headline_called('germany03');">{{germany_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline4" onclick="program().headline_called('germany04');">{{germany_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline5" onclick="program().headline_called('germany05');">{{germany_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline6" onclick="program().headline_called('germany06');">{{germany_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline7" onclick="program().headline_called('germany07');">{{germany_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline8" onclick="program().headline_called('germany08');">{{germany_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline9" onclick="program().headline_called('germany09');">{{germany_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline10" onclick="program().headline_called('germany10');">{{germany_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline11" onclick="program().headline_called('germany11');">{{germany_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline12" onclick="program().headline_called('germany12');">{{germany_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline13" onclick="program().headline_called('germany13');">{{germany_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="germany_headline14" onclick="program().headline_called('germany14');">{{germany_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#russia_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">RUSSIA</a>
+                    <ul class="collapse list-unstyled" id="russia_Submenu">
+                        <li>
+                            <a id ="russia_headline0" onclick="program().headline_called('russia00');" >{{russia_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline1" onclick="program().headline_called('russia01');">{{russia_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline2" onclick="program().headline_called('russia02');">{{russia_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline3" onclick="program().headline_called('russia03');">{{russia_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline4" onclick="program().headline_called('russia04');">{{russia_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline5" onclick="program().headline_called('russia05');">{{russia_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline6" onclick="program().headline_called('russia06');">{{russia_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline7" onclick="program().headline_called('russia07');">{{russia_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline8" onclick="program().headline_called('russia08');">{{russia_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline9" onclick="program().headline_called('russia09');">{{russia_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline10" onclick="program().headline_called('russia10');">{{russia_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline11" onclick="program().headline_called('russia11');">{{russia_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline12" onclick="program().headline_called('russia12');">{{russia_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline13" onclick="program().headline_called('russia13');">{{russia_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="russia_headline14" onclick="program().headline_called('russia14');">{{russia_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#saudi_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">SAUDI ARABIA</a>
+                    <ul class="collapse list-unstyled" id="saudi_Submenu">
+                        <li>
+                            <a id ="saudi_headline0" onclick="program().headline_called('saudi00');">{{saudi_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline1" onclick="program().headline_called('saudi01');">{{saudi_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline2" onclick="program().headline_called('saudi02');">{{saudi_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline3" onclick="program().headline_called('saudi03');">{{saudi_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline4" onclick="program().headline_called('saudi04');">{{saudi_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline5" onclick="program().headline_called('saudi05');">{{saudi_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline6" onclick="program().headline_called('saudi06');">{{saudi_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline7" onclick="program().headline_called('saudi07');">{{saudi_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline8" onclick="program().headline_called('saudi08');">{{saudi_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline9" onclick="program().headline_called('saudi09');">{{saudi_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline10" onclick="program().headline_called('saudi10');">{{saudi_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline11" onclick="program().headline_called('saudi11');">{{saudi_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline12" onclick="program().headline_called('saudi12');">{{saudi_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline13" onclick="program().headline_called('saudi13');">{{saudi_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="saudi_headline14" onclick="program().headline_called('saudi14');">{{saudi_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                    <li>
+                        <a href="#india_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">INDIA</a>
+                        <ul class="collapse list-unstyled" id="india_Submenu">
+                            <li>
+                                <a id ="india_headline0" onclick="program().headline_called('india00');">{{india_headline0}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline1" onclick="program().headline_called('india01');">{{india_headline1}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline2" onclick="program().headline_called('india02');">{{india_headline2}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline3" onclick="program().headline_called('india03');">{{india_headline3}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline4" onclick="program().headline_called('india04');">{{india_headline4}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline5" onclick="program().headline_called('india05');">{{india_headline5}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline6" onclick="program().headline_called('india06');">{{india_headline6}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline7" onclick="program().headline_called('india07');">{{india_headline7}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline8" onclick="program().headline_called('india08');">{{india_headline8}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline9" onclick="program().headline_called('india09');">{{india_headline9}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline10" onclick="program().headline_called('india10');">{{india_headline10}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline11" onclick="program().headline_called('india11');">{{india_headline11}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline12" onclick="program().headline_called('india12');">{{india_headline12}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline13" onclick="program().headline_called('india13');">{{india_headline13}}</a>
+                            </li>
+                            <li>
+                                <a id ="india_headline14" onclick="program().headline_called('india14');">{{india_headline14}}</a>
+                            </li>
+    
+                            
+                        </ul>
+                    </li>
+                   
+                </li>
+                <li>
+                    <a href="#china_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">CHINA</a>
+                    <ul class="collapse list-unstyled" id="china_Submenu">
+                        <li>
+                            <a id ="china_headline0" onclick="program().headline_called('china00');" >{{china_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline1" onclick="program().headline_called('china01');" >{{china_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline2" onclick="program().headline_called('china02');">{{china_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline3" onclick="program().headline_called('china03');">{{china_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline4" onclick="program().headline_called('china04');">{{china_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline5" onclick="program().headline_called('china05');">{{china_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline6" onclick="program().headline_called('china06');">{{china_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline7" onclick="program().headline_called('china07');">{{china_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline8" onclick="program().headline_called('china08');">{{china_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline9" onclick="program().headline_called('china09');">{{china_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline10" onclick="program().headline_called('china10');">{{china_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline11" onclick="program().headline_called('china11');">{{china_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline12" onclick="program().headline_called('china12');">{{china_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline13" onclick="program().headline_called('china13');">{{china_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="china_headline14" onclick="program().headline_called('china14');">{{china_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#brazil_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">BRAZIL</a>
+                    <ul class="collapse list-unstyled" id="brazil_Submenu">
+                        <li>
+                            <a id ="brazil_headline0" onclick="program().headline_called('brazil00');">{{brazil_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline1" onclick="program().headline_called('brazil01');">{{brazil_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline2" onclick="program().headline_called('brazil02');">{{brazil_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline3" onclick="program().headline_called('brazil03');">{{brazil_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline4" onclick="program().headline_called('brazil04');">{{brazil_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline5" onclick="program().headline_called('brazil05');">{{brazil_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline6" onclick="program().headline_called('brazil06');">{{brazil_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline7" onclick="program().headline_called('brazil07');">{{brazil_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline8" onclick="program().headline_called('brazil08');">{{brazil_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline9" onclick="program().headline_called('brazil09');">{{brazil_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline10" onclick="program().headline_called('brazil10');">{{brazil_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline11" onclick="program().headline_called('brazil11');">{{brazil_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline12" onclick="program().headline_called('brazil12');">{{brazil_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline13" onclick="program().headline_called('brazil13');">{{brazil_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="brazil_headline14" onclick="program().headline_called('brazil14');">{{brazil_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#southafrica_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">SOUTH AFRICA</a>
+                    <ul class="collapse list-unstyled" id="southafrica_Submenu">
+                        <li>
+                            <a id ="southafrica_headline0" onclick="program().headline_called('southafrica00');">{{southafrica_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline1" onclick="program().headline_called('southafrica01');">{{southafrica_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline2" onclick="program().headline_called('southafrica02');">{{southafrica_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline3" onclick="program().headline_called('southafrica03');">{{southafrica_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline4" onclick="program().headline_called('southafrica04');">{{southafrica_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline5" onclick="program().headline_called('southafrica05');">{{southafrica_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline6" onclick="program().headline_called('southafrica06');">{{southafrica_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline7" onclick="program().headline_called('southafrica07');">{{southafrica_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline8" onclick="program().headline_called('southafrica08');">{{southafrica_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline9" onclick="program().headline_called('southafrica09');">{{southafrica_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline10" onclick="program().headline_called('southafrica10');">{{southafrica_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline11" onclick="program().headline_called('southafrica11');">{{southafrica_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline12" onclick="program().headline_called('southafrica12');">{{southafrica_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline13" onclick="program().headline_called('southafrica13');">{{southafrica_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="southafrica_headline14" onclick="program().headline_called('southafrica14');">{{southafrica_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#japan_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">JAPAN</a>
+                    <ul class="collapse list-unstyled" id="japan_Submenu">
+                        <li>
+                            <a id ="japan_headline0" onclick="program().headline_called('japan00');" >{{japan_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline1" onclick="program().headline_called('japan01');">{{japan_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline2" onclick="program().headline_called('japan02');">{{japan_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline3" onclick="program().headline_called('japan03');">{{japan_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline4" onclick="program().headline_called('japan004');">{{japan_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline5" onclick="program().headline_called('japan05');">{{japan_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline6" onclick="program().headline_called('japan06');">{{japan_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline7" onclick="program().headline_called('japan07');">{{japan_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline8" onclick="program().headline_called('japan08');">{{japan_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline9" onclick="program().headline_called('japan09');">{{japan_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline10" onclick="program().headline_called('japan10');">{{japan_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline11" onclick="program().headline_called('japan11');">{{japan_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline12" onclick="program().headline_called('japan12');">{{japan_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline13" onclick="program().headline_called('japan13');">{{japan_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="japan_headline14" onclick="program().headline_called('japan14');">{{japan_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#austrailia_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">AUSTRAILIA</a>
+                    <ul class="collapse list-unstyled" id="austrailia_Submenu">
+                        <li>
+                            <a id ="austrailia_headline0" onclick="program().headline_called('austrailia00');" >{{austrailia_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline1" onclick="program().headline_called('austrailia01');">{{austrailia_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline2" onclick="program().headline_called('austrailia02');">{{austrailia_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline3" onclick="program().headline_called('austrailia03');">{{austrailia_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline4" onclick="program().headline_called('austrailia04');">{{austrailia_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline5" onclick="program().headline_called('austrailia05');">{{austrailia_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline6" onclick="program().headline_called('austrailia06');">{{austrailia_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline7" onclick="program().headline_called('austrailia07');">{{austrailia_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline8" onclick="program().headline_called('austrailia08');">{{austrailia_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline9" onclick="program().headline_called('austrailia09');">{{austrailia_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline10" onclick="program().headline_called('austrailia10');">{{austrailia_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline11" onclick="program().headline_called('austrailia11');">{{austrailia_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline12" onclick="program().headline_called('austrailia12');">{{austrailia_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline13" onclick="program().headline_called('austrailia13');">{{austrailia_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="austrailia_headline14" onclick="program().headline_called('austrailia14');">{{austrailia_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#nigeria_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">NIGERIA</a>
+                    <ul class="collapse list-unstyled" id="nigeria_Submenu">
+                        <li>
+                            <a id ="nigeria_headline0" onclick="program().headline_called('niger00');" >{{nigeria_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline1" onclick="program().headline_called('niger01');">{{nigeria_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline2" onclick="program().headline_called('niger02');">{{nigeria_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline3" onclick="program().headline_called('niger03');">{{nigeria_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline4" onclick="program().headline_called('niger04');">{{nigeria_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline5" onclick="program().headline_called('niger05');">{{nigeria_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline6" onclick="program().headline_called('niger06');">{{nigeria_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline7" onclick="program().headline_called('niger07');">{{nigeria_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline8" onclick="program().headline_called('niger08');">{{nigeria_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline9" onclick="program().headline_called('niger09');">{{nigeria_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline10" onclick="program().headline_called('niger10');">{{nigeria_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline11" onclick="program().headline_called('niger11');">{{nigeria_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline12" onclick="program().headline_called('niger12');">{{nigeria_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline13" onclick="program().headline_called('niger13');">{{nigeria_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="nigeria_headline14" onclick="program().headline_called('niger14');">{{nigeria_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li> 
+                <li>
+                    <a href="#mexico_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">MEXICO</a>
+                    <ul class="collapse list-unstyled" id="mexico_Submenu">
+                        <li>
+                            <a id ="mexico_headline0" onclick="program().headline_called('mexico00');">{{mexico_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline1" onclick="program().headline_called('mexico01');">{{mexico_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline2" onclick="program().headline_called('mexico02');">{{mexico_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline3" onclick="program().headline_called('mexico03');">{{mexico_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline4" onclick="program().headline_called('mexico04');">{{mexico_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline5" onclick="program().headline_called('mexico05');">{{mexico_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline6" onclick="program().headline_called('mexico06');">{{mexico_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline7" onclick="program().headline_called('mexico07');">{{mexico_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline8" onclick="program().headline_called('mexico08');">{{mexico_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline9" onclick="program().headline_called('mexico09');">{{mexico_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline10" onclick="program().headline_called('mexico10');">{{mexico_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline11" onclick="program().headline_called('mexico11');">{{mexico_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline12" onclick="program().headline_called('mexico12');">{{mexico_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline13" onclick="program().headline_called('mexico13');">{{mexico_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="mexico_headline14" onclick="program().headline_called('mexico14');">{{mexico_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#singapore_Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">SINGAPORE</a>
+                    <ul class="collapse list-unstyled" id="singapore_Submenu">
+                        <li>
+                            <a id ="singapore_headline0" onclick="program().headline_called('singapore00');" >{{singapore_headline0}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline1" onclick="program().headline_called('singapore01');">{{singapore_headline1}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline2" onclick="program().headline_called('singapore02');">{{singapore_headline2}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline3" onclick="program().headline_called('singapore03');">{{singapore_headline3}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline4" onclick="program().headline_called('singapore04');">{{singapore_headline4}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline5" onclick="program().headline_called('singapore05');">{{singapore_headline5}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline6" onclick="program().headline_called('singapore06');">{{singapore_headline6}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline7" onclick="program().headline_called('singapore07');">{{singapore_headline7}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline8" onclick="program().headline_called('singapore08');">{{singapore_headline8}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline9" onclick="program().headline_called('singapore09');">{{singapore_headline9}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline10" onclick="program().headline_called('singapore10');">{{singapore_headline10}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline11" onclick="program().headline_called('singapore11');">{{singapore_headline11}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline12" onclick="program().headline_called('singapore12');">{{singapore_headline12}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline13" onclick="program().headline_called('singapore13');">{{singapore_headline13}}</a>
+                        </li>
+                        <li>
+                            <a id ="singapore_headline14" onclick="program().headline_called('singapore14');">{{singapore_headline14}}</a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+               
+            </ul>
+            
+
+           
+        </nav>
+
+        <!-- Page Content  -->
+        
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+    
+    <script src="map.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+
+</html>
